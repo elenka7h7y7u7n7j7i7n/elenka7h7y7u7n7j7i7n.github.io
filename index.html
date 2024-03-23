@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лена</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="img/logo.svg" alt=""></a>
+        <span class="menu-btn">&#9776;</span>
+        <nav>
+            <a href="#" class="link">Главная</a>
+            <a href="#favorite" class="link">Обо мне</a>
+            <a href="#streams" class="link">Мои стримы</a>
+        </nav>
+
+        <a href="#" class="btn">напиши мне</a>
+
+    </header>
+
+    <main>
+        <div class="banner">
+            <h1>Я - геймер</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur.<br>
+                Explicabo accusantium, voluptas<br>
+                amet consequatur dolor aut magnam odit rerum
+            </p>
+
+            <a href="#" class="btn">узнать детали</a>
+        </div>
+
+        <div class="games" id="favorite">
+            <h2>Мои любимые игры</h2>
+            <div class="boxes">
+                <div>
+                    <img src="img/whitcher.jpg" alt="">
+                    <span>100 подписчиков</span>
+                </div>
+                <div>
+                    <img src="img/greenh.jpg" alt="">
+                    <span>100 подписчиков</span>
+                </div>
+                <div>
+                    <img src="img/mk.jpg" alt="">
+                    <span>100 подписчиков</span>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="streams" id="streams">
+            <h2>ПОДКЛЮЧАЙТЕСЬ К СТРИМАМ</h2>
+            <div class="slider">
+                <img src="img/1.jpg" alt="">
+                <img src="img/2.jpeg" alt="">
+                <img src="img/3.jpeg" alt="">
+                <img src="img/4.jpg" alt="">
+                <img src="img/5.jpeg" alt="">
+                <img src="img/6.jpg" alt="">
+                <img src="img/7.jpg" alt="">
+                <img src="img/8.jpeg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="http://t.me/Lena_sila" target="_blank">
+            <img src="img/1.svg" alt="">
+        </a>
+        <a href="#" target="_blank">
+            <img src="img/2.svg" alt="">
+        </a>
+        <a href="#" target="_blank">
+            <img src="img/3.svg" alt="">
+        </a>
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $('.slider').slick({
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            //  arrows: false,
+            // dots: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+
+
+    <script>
+
+        $('.menu-btn').click(function() {
+            $('nav').toggleClass('open');
+        })
+
+    </script>
+
+
+</body>
+
+</html>
